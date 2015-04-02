@@ -103,6 +103,9 @@ function loadCity(city) {
 //________ //draw city features _______ //
                
         var svg = d3.select("#map");
+
+
+        
         svg.selectAll("path").remove();  
         
         json.features.reverse();
@@ -111,16 +114,22 @@ function loadCity(city) {
     		.enter()
     	    .append("path")
     		.attr("d", path)
-    		.style("fill", function(d) {
+    	
+            .style("fill", function(d) {
             return color(d.properties.jaar)     
     		})
             //.style("stroke", "black")
     		.style("stroke-width", "1px");
             
  //----------- // building the legend bar //---------//      
-            var width =  Math.round(100 / years.length)
+            var width =  100 / years.length
             var height = 50
             var legend = d3.select("#legend");
+            legend.selectAll("div").transition()
+                 .style("background-color", "red")
+              
+                 
+                 
             legend.selectAll("div").remove()
             
             legend.selectAll("div")
@@ -143,12 +152,11 @@ function loadCity(city) {
                  .style("font-weight", "bold")
                  .style("font-size", "18px")
                  .style("font-family","Verdana")
-                
-                
                  
     });   
     
+ 
 }
 
 loadCity('amsterdam')
-       
+
