@@ -5,15 +5,61 @@
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script src="http://d3js.org/topojson.v1.min.js"></script>
 	<script src="http://d3js.org/colorbrewer.v1.min.js"></script>
-
+    <script src = "js.js" type="text/javascript"> 	</script>
+   
 	
 	<link rel="stylesheet" href="stijl.css" type="text/css">
 	
 </head>
 <body>
-	<h1> Verstedelijking van <span id ="stad">Niene</span> </h1>
-	<p><a href = "http://app.nos.nl/datavisualisatie/gemeentegrenzen/">Bron</a></p>
-	<svg id="map" />
-	<script src = "js.js"> 	</script>
+    <svg id="map" />
+    
+    <div id="layout">
+        
+        <div id='verstedelijking'>
+        <h1> Verstedelijking van </h1> </div>
+        
+        <h1 class='title'> <span id ="stad" > Amsterdam </span> </h1>
+    	
+        <div id="Option">
+            <input  name ="getCity"
+                    type="button" 
+                    value= 'Nijmegen'
+                    onclick = "loadCity('nijmegen')" />
+        </div>
+        <div id="cityOption">
+             <input  name ="getCity"
+                     type="button" 
+                     value= 'Amsterdam'
+                     onclick = "loadCity('amsterdam')" />
+       </div>
+       <div id="cityOption">
+           <input  name ="getCity"
+                   type="button" 
+                   value= 'Breda'
+                   onclick = "loadCity('breda')" />
+       </div>
+       <div id="cityOption">
+           <input  name ="getCity"
+                   type="button" 
+                   value= 'Den Haag'
+                   onclick = "loadCity('denhaag')" />
+       </div>
+       <div id="cityOption">
+           <input  name ="getCity"
+                   type="button" 
+                   value= 'Groningen'
+                   onclick = "loadCity('groningen')" />
+       </div>
+    
+    
+    </div>
+       
+    <div id='legend' > </div>
+     <a 
+        href="http://app.nos.nl/datavisualisatie/gemeentegrenzen/" 
+        target = "_blank"> Bron </a>
+    
+    <script src = "js.js"></script>
 </body>
 </html>
