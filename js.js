@@ -22,6 +22,15 @@ function loadCity(city) {
         case "breda":
             center = [4.775136, 51.588603]
             break
+        case "rotterdam":
+            center = [4.4904063, 51.9279723]
+            break
+        case "denbosch":
+            center = [5.3181784, 51.7148187]
+            break
+        case "rotterdam":
+            center = [4.4904063, 51.9279723]
+            break
         default:
             center = [0,0]
     }; 
@@ -92,7 +101,7 @@ function loadCity(city) {
 
         // building the legend bar //      
         var width =  100 / years.length;
-        var height = 50;
+        var height = 35;
         var legend = d3.select("#legend");
         legend.selectAll("div").remove();
         legend.selectAll("div")

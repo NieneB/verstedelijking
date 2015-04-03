@@ -5,9 +5,9 @@
 
 body {
     
-    background-image: url("natural_paper.png");
+    background-image: url("old-mathematics.png");
     background-color: #363636;
-    background-blend-mode: multiply;
+    background-blend-mode: soft-light;
 /*    background-size:100%;*/
 /*    background-repeat: no-repeat;*/
     color: #BF812D;
@@ -80,7 +80,7 @@ text{
 
 
 input{
-    mix-blend-mode: hard-light;
+    mix-blend-mode: multiply;
     position: inherit;
     width: 150px;
     font-size:95%;
