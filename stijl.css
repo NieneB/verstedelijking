@@ -6,16 +6,16 @@
 
 body {
     
-/*    background-image: url("old-mathematics.png");*/
+    background-image: url("old-mathematics.png");
     background-color: #363636;
-/*    background-blend-mode: soft-light;*/
+    background-blend-mode: soft-light;
 /*    background-size:100%;*/
 /*    background-repeat: no-repeat;*/
     color: #BF812D;
 }
 
 svg {
-/*   mix-blend-mode: luminosity ;*/
+   mix-blend-mode: hard-light ;
 }
     #map{
         position: fixed;
@@ -69,6 +69,11 @@ h1 {
 
 p {
     font-family: Verdana;
+    line-height: 30px;
+}
+#bron{
+    display: block;
+    margin-top: 50px;
 }
 
 text{

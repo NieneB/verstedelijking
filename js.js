@@ -1,25 +1,22 @@
-function searchKeyPress(e)
-  {
-      // look for window.event in case event isn't passed in
+
+loadCity("amsterdam")
+function searchKeyPress(e){
       e = e || window.event;
       if (e.keyCode == 13)
-      {
-          defineCity()
-      }
-  }
+          {defineCity()};
+};
 
 function defineCity(){
-var city = document.getElementById("myText").value
-console.log(city)
-    loadCity(city)
-}
+    var city = document.getElementById("myText").value;
+    console.log(city);
+    loadCity(city);
+};
 
-loadCity("Amsterdam")
 function loadCity(city) {
     var url = "http://api.histograph.io/search?name=" + city + "&type=hg:Place";
     d3.json(url, function(err, concepts) {
         console.log("Calling api.histograph.io for city: '" + city + "':");
-        d3.select("#Error").html(city + " wordt getekend");
+        d3.select("#Error").html(" ");
         if (concepts.features.length > 0 ) {                          // checks if concepts exist! // 
             
             var concept = concepts.features.filter(function(concept) {
@@ -68,16 +65,16 @@ function loadCity(city) {
                 d3.select("#stad").html(name);
                 // colors //
                 var numcolors = years.length;
-                
+          
                 var color = d3
                     .scale.ordinal()
                     .domain(d3.range(years))
-                    .range(colorbrewer.BrBG[numcolors]);
+                    .range(BrBg[numcolors]);
                 
                 // projection//
-                var scale = 150;
-                var offset = [innerWidth/2, innerHeight/2];
-                var center = d3.geo.centroid(atlas.features[numcolors-1].geometry)
+                var scale = 1500;
+                var offset = [innerWidth/2.5, innerHeight/2];
+                var center = d3.geo.centroid(atlas.features[1].geometry)
                 var projection = d3.geo.mercator()
                 .scale(scale)
                 .center(center)
@@ -88,7 +85,10 @@ function loadCity(city) {
 
                 //new projection//
                 var bound = path.bounds(atlas.features[0].geometry);
-                scale = scale / Math.max((bound[1][0] - bound[0][0]) / window.innerWidth, (bound[1][1] - bound[0][1]) / window.innerHeight);
+                scale = 1500 / Math.max(
+                                        (bound[1][0] - bound[0][0]) / window.innerWidth, 
+                                        (bound[1][1] - bound[0][1]) / window.innerHeight 
+                                );
 
                 offset  = [innerWidth - (bound[0][0] + bound[1][0])/2,
                     innerHeight - (bound[0][1] + bound[1][1])/2];
@@ -107,14 +107,15 @@ function loadCity(city) {
                     .enter()  
                     .append("path")
                     .attr("d", path)
-                    .style("fill", "black")
+                    .style("fill", "#black")
                     .style("stroke", "#3c4044")
-                    .style("stroke-width", "1px")
+                    .style("stroke-width", "-1px")
                     .style("opacity", "0.1")
                     // .style("mix-blend-mode", "hard-light")
                     .transition()
                     .style("opacity", "1")
-                    .style("stroke", "none")
+                    .style("stroke", "#3c4044")
+                    .style("stroke-width", "0.1px")
                     .style("fill", function(d) {
                         return color(d.properties.hasBeginning)
                         })

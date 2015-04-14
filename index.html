@@ -4,8 +4,11 @@
 	<title> Verstedelijking </title>
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script src="http://d3js.org/topojson.v1.min.js"></script>
-    <script src="http://d3js.org/colorbrewer.v1.min.js"></script>
+    <!-- // <script src="http://d3js.org/colorbrewer.v1.min.js"></script> -->
     <script src = "js.js">	</script>
+    <script src="colors2.js" type="text/javascript" charset="utf-8"></script>
+
+    
 	<link rel="stylesheet" href="stijl.css" type="text/css">
 	
 </head>
@@ -24,12 +27,13 @@
                     value = "amsterdam"
                     onkeypress = "searchKeyPress(event)" >
             
-            <p><span id="Error"> Vul een stad in </span>                </p>
-       
+            <p><span id="Error">  </span> </p>
+            
+            <p id= "bron"> Klik 
+                <a href="http://app.nos.nl/datavisualisatie/gemeentegrenzen/" target = "_blank">hier</a> voor de bron </p>
+       </div>
     <div id='legend' > </div>
-     <a 
-        href="http://app.nos.nl/datavisualisatie/gemeentegrenzen/" 
-        target = "_blank"> Bron </a>
+     
     
 </body>
 </html>
