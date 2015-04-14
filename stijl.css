@@ -3,18 +3,19 @@
     padding: 0;
 }
 
+
 body {
     
     background-image: url("old-mathematics.png");
     background-color: #363636;
-    background-blend-mode: soft-light;
+/*    background-blend-mode: soft-light;*/
 /*    background-size:100%;*/
 /*    background-repeat: no-repeat;*/
     color: #BF812D;
 }
 
 svg {
-   mix-blend-mode: hard-light ;
+/*   mix-blend-mode: luminosity ;*/
 }
     #map{
         position: fixed;
@@ -46,7 +47,7 @@ div{}
          vertical-align: bottom;
          bottom:0;
          width:100%;
-         mix-blend-mode: hard-light;
+/*        mix-blend-mode: hard-light;*/
      }
      .rect{
          display:inline-block;
@@ -55,7 +56,8 @@ div{}
 h1 {
     position: inherit;
     text-shadow: 2px 2px 2px #1f2123;
-    font-family: Verdana;  
+    font-family: Verdana;
+    
     }
 
     .title{
@@ -77,24 +79,19 @@ text{
 }
 
 
-
-
 input{
-    mix-blend-mode: multiply;
-    position: inherit;
-    width: 150px;
+    width: 135px;
     font-size:95%;
     padding:1%;
-   
     font-weight:bold;
     font-family:Verdana;
-    color: grey;
+    color:  white;
+    valueUrban.ttf-anchor: middle;
     margin-top: 1%;
-    display: flex;
-    background-color: #a97c14;
+    display: block;
+    background-color: black;
     border: 0;
     border-radius:5px;
     box-shadow: -2px -2px 5px  #3c4044 inset;
-    text-align: center;
     box-sizing:border:box;
 }
