@@ -15,12 +15,44 @@ body, a, a:visited {
     color: #BF812D;
 }
 
-svg {
-    opacity: 0.9;
-    
+h1 {
+    font-size: 60px;
+    vertical-align: 0px;
+    position: inherit;
+    text-shadow: 4px 4px 5px #1f2123;
+    font-family: Verdana;
+    display: inline;
+}
+p {
+    font-family: Verdana;
+    line-height: 30px;
+    display: block;
 }
 
-#map {
+#source{
+    transform: rotate(270deg);
+    transform-origin: top right 0;
+    float: right; 
+    margin-right: 1.5%;
+   
+}
+input {
+    width: 170px;
+    font-size: 95%;
+    padding: 1.1%;
+    font-weight: bold;
+    font-family: Verdana;
+    color: white;
+    valueUrban.ttf-anchor: middle;
+    margin-top: 1%;
+    background-color: black;
+    border: 0;
+    border-radius:5px;
+    box-shadow: -2px -2px 5px  #3c4044 inset;
+}
+
+svg {
+    opacity: 0.9;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -37,14 +69,11 @@ svg {
     padding-right: 2%;
     padding-bottom: 2%;
     width: 100%;
-    heigth:100%;
+    heigth: 100%;
     z-index: 2;
     box-sizing: border-box;
 }
 
-#verstedelijking {
-    width: 45px;
-}
 
 #legend {
    position: fixed;
@@ -58,49 +87,8 @@ svg {
    display: inline-block;
 }
 
-h1 {
-    position: inherit;
-    text-shadow: 2px 2px 2px #1f2123;
-    font-family: Verdana;
-}
-
 .title {
-    text-shadow: 4px 4px 5px #1f2123;
-    font-size: 75px;
     color: #80CDC1;
-    line-height: 100px;
 }
 
-p {
-    font-family: Verdana;
-    line-height: 30px;
-}
 
-#bron {
-    display: block;
-    margin-top: 50px;
-}
-
-text {
-    color: #ffffff ;
-    font-family: Verdana;
-    font-size: 18px;
-    font-weight:bold;
-}
-
-input {
-    width: 135px;
-    font-size:95%;
-    padding:1%;
-    font-weight:bold;
-    font-family:Verdana;
-    color:  white;
-    valueUrban.ttf-anchor: middle;
-    margin-top: 1%;
-    display: block;
-    background-color: black;
-    border: 0;
-    border-radius:5px;
-    box-shadow: -2px -2px 5px  #3c4044 inset;
-    box-sizing:border:box;
-}

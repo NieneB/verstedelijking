@@ -12,21 +12,21 @@
 <body>
     <svg id="map" />
     <div id="layout">
-        <div id="verstedelijking">
+        <div>
             <h1>Verstedelijking van </h1>
+            <h1 class="title">
+                <span id="city-label">Amsterdam</span>
+            </h1>
         </div>
-        <h1 class="title">
-            <span id="city-label">Amsterdam</span>
-        </h1>
-        <p>Vul hier een stad in:</p>
-        <input type="text"
+        <input placeholder = "Vul hier een stad in "
+               type="text"
                id="city-input"
-               value="amsterdam"
                onkeypress="searchKeyPress(event)" />
         <p><span id="error"></span></p>
-        <p id="bron">
+        <p id="source">
           Geïnspireerd door de
-          <a href="http://app.nos.nl/datavisualisatie/gemeentegrenzen/" target="_blank">datavisualisatie op nos.nl</a>
+          <a href="http://app.nos.nl/datavisualisatie/gemeentegrenzen/" target="_blank">
+              datavisualisatie op nos.nl</a>
         </p>
     </div>
     <div id="legend"></div>
