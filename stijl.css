@@ -5,8 +5,8 @@
 
 
 body {
-    
-    background-image: url("old-mathematics.png");
+
+    background-image: url("background.png");
     background-color: #363636;
     background-blend-mode: soft-light;
 /*    background-size:100%;*/
@@ -52,12 +52,12 @@ div{}
      .rect{
          display:inline-block;
        }
-    
+
 h1 {
     position: inherit;
     text-shadow: 2px 2px 2px #1f2123;
     font-family: Verdana;
-    
+
     }
 
     .title{
