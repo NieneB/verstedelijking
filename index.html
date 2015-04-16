@@ -8,32 +8,32 @@
     <script src = "js.js">	</script>
     <script src="colors2.js" type="text/javascript" charset="utf-8"></script>
 
-    
-	<link rel="stylesheet" href="stijl.css" type="text/css">
-	
+
+	<link rel="stylesheet" href="style.css" type="text/css">
+
 </head>
 <body>
     <svg id="map"  />
-    
+
     <div id="layout">
         <div id='verstedelijking'>
         <h1 > Verstedelijking van </h1> </div>
-        
+
         <h1 class='title'> <span id ="stad" > Amsterdam </span> </h1>
         <p> Vul hier een stad in:  </p>
-            <input 
-                    type="text" 
+            <input
+                    type="text"
                     id = "myText"
                     value = "amsterdam"
                     onkeypress = "searchKeyPress(event)" >
-            
+
             <p><span id="Error">  </span> </p>
-            
-            <p id= "bron"> Klik 
+
+            <p id= "bron"> Klik
                 <a href="http://app.nos.nl/datavisualisatie/gemeentegrenzen/" target = "_blank">hier</a> voor de bron </p>
        </div>
     <div id='legend' > </div>
-     
-    
+
+
 </body>
 </html>
