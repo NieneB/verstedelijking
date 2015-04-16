@@ -5,8 +5,8 @@
 
 body {
     background-image: url("background.png");
-    background-color: #363636;
-    background-blend-mode: soft-light;
+    background-color: #333333;
+    background-blend-mode: hard-light;
     /* background-size:100%;*/
     /* background-repeat: no-repeat;*/
 }
@@ -16,7 +16,8 @@ body, a, a:visited {
 }
 
 svg {
-   mix-blend-mode: hard-light;
+    opacity: 0.9;
+    
 }
 
 #map {

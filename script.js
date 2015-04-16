@@ -77,7 +77,7 @@ function updateVisualization(atlas) {
   var yearCount = years.length;
   var color = d3.scale.ordinal()
       .domain(d3.range(years))
-      .range(BrBg[yearCount]);
+      .range(BGBr[yearCount]);
 
   // projection
   var scale = 1500;
