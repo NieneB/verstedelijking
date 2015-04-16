@@ -1,39 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Verstedelijking </title>
-	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-	<script src="http://d3js.org/topojson.v1.min.js"></script>
-    <!-- // <script src="http://d3js.org/colorbrewer.v1.min.js"></script> -->
-    <script src = "js.js">	</script>
+    <meta charset="utf-8">
+	  <title> Verstedelijking </title>
+	  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	  <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="js.js"></script>
     <script src="colors2.js" type="text/javascript" charset="utf-8"></script>
-
-
-	<link rel="stylesheet" href="style.css" type="text/css">
-
+  	<link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-    <svg id="map"  />
-
+    <svg id="map" />
     <div id="layout">
-        <div id='verstedelijking'>
-        <h1 > Verstedelijking van </h1> </div>
-
-        <h1 class='title'> <span id ="stad" > Amsterdam </span> </h1>
-        <p> Vul hier een stad in:  </p>
-            <input
-                    type="text"
-                    id = "myText"
-                    value = "amsterdam"
-                    onkeypress = "searchKeyPress(event)" >
-
-            <p><span id="Error">  </span> </p>
-
-            <p id= "bron"> Klik
-                <a href="http://app.nos.nl/datavisualisatie/gemeentegrenzen/" target = "_blank">hier</a> voor de bron </p>
-       </div>
-    <div id='legend' > </div>
-
-
+        <div id="verstedelijking">
+            <h1>Verstedelijking van </h1>
+        </div>
+        <h1 class="title">
+            <span id="stad">Amsterdam</span>
+        </h1>
+        <p>Vul hier een stad in:</p>
+        <input type="text"
+               id="myText"
+               value="amsterdam"
+               onkeypress="searchKeyPress(event)" />
+        <p><span id="error"></span></p>
+        <p id="bron">
+          Geïnspireerd door de
+          <a href="http://app.nos.nl/datavisualisatie/gemeentegrenzen/" target="_blank">datavisualisatie op nos.nl</a>
+        </p>
+    </div>
+    <div id="legend"></div>
 </body>
 </html>
