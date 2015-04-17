@@ -8,11 +8,8 @@
 function defineCity(){
     var e = document.getElementById("city-input");
     var city = e.options[e.selectedIndex].text;
-    console.log(city);
     loadCity(city);
 };
-
-
 
 function loadCity(city) {
     var url = "http://api.histograph.io/search?name=" + city + "&type=hg:Place";
