@@ -1,14 +1,18 @@
-function searchKeyPress(e){
-    e = e || window.event;
-    if (e.keyCode == 13) {
-        defineCity();
-    }
-};
+// function searchKeyPress(e){
+//     e = e || window.event;
+//     if (e.keyCode == 13) {
+//         defineCity();
+//     }
+// };
 
 function defineCity(){
-    var city = document.getElementById("city-input").value;
+    var e = document.getElementById("city-input");
+    var city = e.options[e.selectedIndex].text;
+    console.log(city);
     loadCity(city);
 };
+
+
 
 function loadCity(city) {
     var url = "http://api.histograph.io/search?name=" + city + "&type=hg:Place";
@@ -81,7 +85,7 @@ function updateVisualization(atlas) {
 
   // projection
   var scale = 1500;
-  var offset = [innerWidth / 2.5, innerHeight / 2];
+  var offset = [innerWidth / 2, innerHeight / 2];
   var center = d3.geo.centroid(atlas.features[yearCount - 1].geometry);
   var projection = d3.geo.mercator()
       .scale(scale)

@@ -13,21 +13,53 @@
     <svg id="map" />
     <div id="layout">
         <div>
-            <h1>Verstedelijking van </h1>
-            <h1 class="title">
-                <span id="city-label">Amsterdam</span>
-            </h1>
+        <h1>Verstedelijking van </h1>
+            <select size=1
+                    id="city-input"
+                    onchange="defineCity()">
+                    <option>Alkmaar</option>
+                    <option>Almere</option>
+                    <option>Amersfoort</option>
+                    <option selected>Amsterdam</option>
+                    <option>Apeldoorn</option>
+                    <option>Arnhem</option>
+                    <option>Breda</option>
+                    <option>Delft</option>
+                    <option>Den Bosch</option>
+                    <option>Den Haag</option>
+                    <option>Deventer</option>
+                    <option>Dordrecht</option>
+                    <option>Ede</option>
+                    <option>Eindhoven</option>
+                    <option>Emmen</option>
+                    <option>Enschede</option>
+                    <option>Groningen</option>
+                    <option>Haarlem</option>
+                    <!-- <option>Haarlemmermeer</option> !municipality -->
+                    <option>Heerlen</option>
+                    <option>Helmond</option>
+                    <option>Hengelo</option>
+                    <option>Hilversum</option>
+                    <option>Leeuwarden</option>
+                    <option>Leiden</option>
+                    <option>Maastricht</option>
+                    <option>Nijmegen</option>
+                    <option>Rotterdam</option>
+                    <!-- <option>Sittard-Geleen</option> !municipality-->
+                    <option>Tilburg</option>
+                    <option>Utrecht</option>
+                    <option>Venlo</option>
+                    <option>Zaanstad</option>
+                    <option>Zoetermeer</option>
+                    <option>Zwolle</option>
+            </select>
         </div>
-        <input placeholder = "Vul hier een stad in "
-               type="text"
-               id="city-input"
-               onkeypress="searchKeyPress(event)" />
-        <p><span id="error"></span></p>
+        <div>
         <p id="source">
           Geïnspireerd door de
           <a href="http://app.nos.nl/datavisualisatie/gemeentegrenzen/" target="_blank">
               datavisualisatie op nos.nl</a>
-        </p>
+        </p> </div>
     </div>
     <div id="legend"></div>
 </body>
