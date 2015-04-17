@@ -86,7 +86,7 @@ function updateVisualization(atlas) {
   // projection
   var scale = 1500;
   var offset = [innerWidth / 2, innerHeight / 2];
-  var center = d3.geo.centroid(atlas.features[yearCount - 1].geometry);
+  var center = d3.geo.centroid(atlas.features[yearCount-1].geometry);
   var projection = d3.geo.mercator()
       .scale(scale)
       .center(center)

@@ -23,21 +23,13 @@ h1 {
     font-family: Verdana;
     display: inline;
 }
+
 p {
     font-family: Verdana;
     line-height: 30px;
     display: block;
 }
 
-#source{
-    position: fixed;
-    transform: rotate(270deg);
-    transform-origin: bottom right 0;
-    top: 25%;
-    right: 1px;
-    
-   
-}
 select{
     padding: 0;
     margin:0;
@@ -56,25 +48,6 @@ select{
     -webkit-font-size: 12px;
     display: inline;
 }
-.styled-select{
-    font-size: 12px;
-}
-/*
-input {
-    width: 170px;
-    font-size: 95%;
-    padding: 1.1%;
-    font-weight: bold;
-    font-family: Verdana;
-    color: white;
-    valueUrban.ttf-anchor: middle;
-    margin-top: 1%;
-    background-color: black;
-    border: 0;
-    border-radius:5px;
-    box-shadow: -2px -2px 5px  #3c4044 inset;
-}*/
-
 svg {
     opacity: 0.9;
     position: fixed;
@@ -83,6 +56,21 @@ svg {
     z-index: -1;
     right: 0;
     top:0;
+}
+
+#source{
+    position: fixed;
+    transform: rotate(270deg);
+    transform-origin: bottom right 0;
+    bottom: 505px;
+    right: 3px;
+}
+
+#git-source{
+    position: fixed;
+    bottom: 40px;;
+    right: 10px;
+    transform: rotate(10deg);
 }
 
 #layout {
@@ -98,21 +86,14 @@ svg {
     box-sizing: border-box;
 }
 
-
 #legend {
    position: fixed;
    vertical-align: bottom;
    bottom: 0;
    width: 100%;
-   /* mix-blend-mode: hard-light;*/
 }
 
 .rect {
    display: inline-block;
 }
-
-.title {
-    color: #80CDC1;
-}
-
 
