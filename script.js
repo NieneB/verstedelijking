@@ -5,9 +5,30 @@
 //     }
 // };
 
-function defineCity(){
-    var e = document.getElementById("city-input");
-    var city = e.options[e.selectedIndex].text;
+
+
+// dropdown menu
+function openelement() {
+    var item = document.getElementById("dropdown");
+    item.style.visibility = 'visible'; 
+}
+
+function closeelement(item){
+        var item = document.getElementById("dropdown");
+        item.style.visibility = 'hidden'
+}
+
+// // end dropdown
+
+
+
+
+
+function defineCity(city){
+    // var e = document.getElementById("city-input");
+//     var city = e.options[e.selectedIndex].text;
+    d3.select("#city").html(city);
+    console.log(city)
     loadCity(city);
 };
 

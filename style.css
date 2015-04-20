@@ -15,6 +15,10 @@ body, a, a:visited {
     color: #BF812D;
 }
 
+img{
+    shadow: 4px 4px 5px #1f2123;
+    cursor: pointer;
+}
 h1 {
     font-size: 60px;
     vertical-align: 0px;
@@ -30,24 +34,17 @@ p {
     display: block;
 }
 
-select{
-    padding: 0;
-    margin:0;
-    border:none;
-    outline:none;
-    box-shadow:none;
-    background:none;
+#city{
+    
     font-size: 60px;
     text-shadow: 4px 4px 5px #1f2123;
     font-family: Verdana;
     display: inline;
     font-weight:bold;
     color: #80CDC1;
-    cursor:pointer;
-    -moz-appearance:none;
-    -webkit-font-size: 12px;
-    display: inline;
+    
 }
+
 svg {
     opacity: 0.9;
     position: fixed;
@@ -82,7 +79,7 @@ svg {
     padding-bottom: 2%;
     width: 100%;
     heigth: 100%;
-    z-index: 2;
+    z-index: 5;
     box-sizing: border-box;
 }
 
@@ -92,8 +89,31 @@ svg {
    bottom: 0;
    width: 100%;
 }
-
-.rect {
-   display: inline-block;
+.rect{
+    display:inline-block;
 }
 
+#dropdown{
+    position: relative;
+    float: middle;
+    padding-left: 2%;
+    padding-top: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    box-sizing: border-box;
+    background-color: white;
+    opacity: 0.7;
+    columns: 3;
+      -webkit-columns: 3;
+      -moz-columns: 3;
+    list-style-type: none;
+    visibility: hidden;
+    border-radius: 25px;
+}
+
+.list {
+    font-family: Verdana;
+    line-height: 30px;
+    color:black;
+    text-decoration:none;
+}

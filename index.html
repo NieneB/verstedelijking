@@ -10,50 +10,49 @@
   	<link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-    <svg id="map" />
+    <svg id="map"/>
     <div id="layout">
-        <div>
-        <h1>Verstedelijking van </h1>
-            <select size=1
-                    id="city-input"
-                    onchange="defineCity()">
-                    <option>Alkmaar</option>
-                    <option>Almere</option>
-                    <option>Amersfoort</option>
-                    <option selected>Amsterdam</option>
-                    <option>Apeldoorn</option>
-                    <option>Arnhem</option>
-                    <option>Breda</option>
-                    <option>Delft</option>
-                    <option>Den Bosch</option>
-                    <option>Den Haag</option>
-                    <option>Deventer</option>
-                    <option>Dordrecht</option>
-                    <option>Ede</option>
-                    <option>Eindhoven</option>
-                    <option>Emmen</option>
-                    <option>Enschede</option>
-                    <option>Groningen</option>
-                    <option>Haarlem</option>
-                    <!-- <option>Haarlemmermeer</option> !municipality -->
-                    <option>Heerlen</option>
-                    <option>Helmond</option>
-                    <option>Hengelo</option>
-                    <option>Hilversum</option>
-                    <option>Leeuwarden</option>
-                    <option>Leiden</option>
-                    <option>Maastricht</option>
-                    <option>Nijmegen</option>
-                    <option>Rotterdam</option>
-                    <!-- <option>Sittard-Geleen</option> !municipality-->
-                    <option>Tilburg</option>
-                    <option>Utrecht</option>
-                    <option>Venlo</option>
-                    <option>Zaanstad</option>
-                    <option>Zoetermeer</option>
-                    <option>Zwolle</option>
-            </select>
-        </div>
+            <h1>Verstedelijking van </h1>
+            <h1 id ="city"> <span id="city"> Amsterdam </span> </h1> 
+            <img src="arrow.png" width=50 height=40 onmouseover="openelement('dropdown')"> </img>
+            
+            <ul id="dropdown" onclick="closeelement('dropdown')">
+                <li><a class="list" href ="#" onclick ="defineCity('Alkmaar')"> Alkmaar</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Almere')"> Almere</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Amersfoort')"> Amersfoort</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Amsterdam')"> Amsterdam</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Apeldoorn')"> Apeldoorn</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Arnhem')"> Arnhem</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Breda')"> Breda</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Delft')"> Delft</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Den Bosch')"> Den Bosch</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Den Haag')"> Den Haag</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Deventer')"> Deventer</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Dordrecht')"> Dordrecht</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Ede')"> Ede</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Eindhoven')"> Eindhoven</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Emmen')"> Emmen</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Enschede')"> Enschede</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Groningen')"> Groningen</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Haarlem')"> Haarlem</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity(' </li>')">  </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Heerlen')"> Heerlen</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Helmond')"> Helmond</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Hengelo')"> Hengelo</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Hilversum')"> Hilversum</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Leeuwarden')"> Leeuwarden</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Leiden')"> Leiden</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Maastricht')"> Maastricht</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Nijmegen')"> Nijmegen</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Rotterdam')"> Rotterdam</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity(' </li>')">  </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Tilburg')"> Tilburg</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Utrecht')"> Utrecht</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Venlo')"> Venlo</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Zaanstad')"> Zaanstad</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Zoetermeer')"> Zoetermeer</a> </li>
+                <li><a class="list" href ="#" onclick ="defineCity('Zwolle')"> Zwolle</optio/a> </li>    
+            </ul> 
         <p id="source">
             Geïnspireerd door de
             <a href="http://app.nos.nl/datavisualisatie/gemeentegrenzen/" target="_blank">
@@ -62,8 +61,6 @@
         <a href= https://github.com/NieneB/verstedelijking target="_blank" id="git-source">
             <img src="GitHub-Mark-64px.png" width="50" height="50" alt="GitHub Mark 64px"> 
         </a>
-    
-        
     </div>
     <div id="legend"></div>
 </body>
