@@ -5,8 +5,6 @@
 //     }
 // };
 
-
-
 // dropdown menu
 function openelement() {
     var item = document.getElementById("dropdown");
@@ -19,10 +17,6 @@ function closeelement(item){
 }
 
 // // end dropdown
-
-
-
-
 
 function defineCity(city){
     // var e = document.getElementById("city-input");
@@ -103,7 +97,7 @@ function updateVisualization(atlas) {
 
   // projection
   var scale = 1500;
-  var offset = [innerWidth / 2, innerHeight / 2];
+  var offset = [innerWidth / 2, innerHeight / 2.1];
   var center = d3.geo.centroid(atlas.features[yearCount-1].geometry);
   var projection = d3.geo.mercator()
       .scale(scale)
@@ -139,7 +133,7 @@ function updateVisualization(atlas) {
       .enter()
     .append("path")
       .attr("d", path)
-      .style("fill", "#black")
+      .style("fill", "grey")
       .style("stroke", "#3c4044")
       .style("stroke-width", "-1px")
       .style("opacity", 0.1)
