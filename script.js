@@ -27,7 +27,7 @@ function defineCity(city){
 };
 
 function loadCity(city) {
-    var url = "http://api.histograph.io/search?name=" + city + "&type=hg:Place";
+    var url = "https://api.histograph.io/search?name=" + city + "&type=hg:Place";
     d3.json(url, function(err, concepts) {
 
         console.log("Calling api.histograph.io for city: '" + city + "':");
