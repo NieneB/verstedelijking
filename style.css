@@ -59,6 +59,8 @@ svg {
     position: fixed;
     transform: rotate(270deg);
     transform-origin: bottom right 0;
+    -webkit-transform: rotate(270deg);
+    -webkit-transform-origin: bottom right 0;
     bottom: 505px;
     right: 3px;
 }
@@ -109,6 +111,7 @@ svg {
     list-style-type: none;
     visibility: hidden;
     border-radius: 25px;
+        cursor: pointer;
 }
 
 .list {
