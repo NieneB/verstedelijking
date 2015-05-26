@@ -20,7 +20,7 @@ img{
     cursor: pointer;
 }
 h1 {
-    font-size: 50px;
+    font-size: 40px;
     vertical-align: 0px;
     position: inherit;
     text-shadow: 4px 4px 5px #1f2123;
@@ -61,6 +61,8 @@ svg {
     transform-origin: bottom right 0;
     -webkit-transform: rotate(270deg);
     -webkit-transform-origin: bottom right 0;
+    -moz-transform: rotate(270deg);
+    -moz-transform-origin: bottom right 0;
     bottom: 505px;
     right: 3px;
 }
@@ -71,6 +73,7 @@ svg {
     right: 10px;
     transform: rotate(10deg);
     -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
 }
 
 #layout {
