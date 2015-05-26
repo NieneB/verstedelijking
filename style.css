@@ -70,6 +70,7 @@ svg {
     bottom: 40px;;
     right: 10px;
     transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
 }
 
 #layout {
