@@ -25,6 +25,7 @@ function defineCity(city){
     console.log(city)
     loadCity(city);
 };
+var atlas
 
 function loadCity(city) {
     var url = "https://api.histograph.io/search?name=" + city + "&type=hg:Place";
@@ -54,7 +55,7 @@ function loadCity(city) {
                     return new Date(b.hasBeginning) - new Date(a.hasBeginning);
                 });
 
-                var atlas = {
+                atlas = {
                     type: "FeatureCollection",
                     features: pits.map(function(pit) {
                         return {
@@ -131,13 +132,19 @@ function updateVisualization(atlas) {
 
   d3.select("#map").selectAll("path").data(atlas.features)
       .enter()
-    .append("path")
+      .append("path")
       .attr("d", path)
+      .attr("id", function(d){
+        var date = new Date(d.properties.hasBeginning)
+        var year = date.getFullYear();
+        return "_"+year;
+      })
       .style("fill", "grey")
       .style("stroke", "#3c4044")
       .style("stroke-width", "-1px")
       .style("opacity", 0.1)
       // .style("mix-blend-mode", "hard-light")
+      
       .transition()
       .style("opacity", "1")
       .style("stroke", "#3c4044")
@@ -150,8 +157,8 @@ function updateVisualization(atlas) {
       .delay(function(d, i) {
           return (years.length-i) * 800;
       })
-      .duration(300);
-
+      .duration(300)
+      
   // building the legend bar
   var width = 100 / years.length;
   var height = 35;
@@ -163,6 +170,11 @@ function updateVisualization(atlas) {
       .enter()
       .append("div")
       .attr("class", "rect")
+      .attr("id", function(d,i){
+        var date = new Date(atlas.features[atlas.features.length - 1 - i].properties.hasBeginning);
+        var year = date.getFullYear();
+        return "_"+year;
+      })
       .style("width", width +"%")
       .style("height", height+"px")
       .style("background-color", function(d, i) {
@@ -175,12 +187,40 @@ function updateVisualization(atlas) {
           return year;
       })
       .style("text-align","center")
-      .style("vertical-align", "middle")
+      .style("vertical-align", "bottom")
       .style("line-height", height + "px")
       .style("font-weight", "bold")
       .style("font-size", "18px")
       .style("font-family", "Verdana")
-      .style("opacity", 0.9);
+      .style("opacity", 0.9)
+      
+      .on("mouseover", function(d){
+          d3.select(this)
+            .style("height", height+30+"px");
+          var jaar = d3.select(this).attr("id")
+          d3.select('#'+jaar)
+            .style("fill", "yellow")
+      })
+      .on("mouseout", function(d){
+          d3.select(this)
+            .style("height", height+"px");
+          var jaar = d3.select(this).attr("id")
+          console.log("path#"+jaar)
+          d3.select('#'+jaar)
+            .style("fill", function(d) {
+          return color(d.properties.hasBeginning);
+        });
+      })
+      
+  
+
 }
 
+
 loadCity("amsterdam");
+
+
+function repeat(){
+  console.log("nog een keer!")
+  updateVisualization(atlas);
+}

@@ -14,9 +14,13 @@
     <div id="layout">
             <h1>Verstedelijking van </h1>
             <h1 id ="city"> <span id="city"> Amsterdam </span> </h1> 
-            <img src="arrow.png" width=50 height=40 onmouseover="openelement('dropdown')"> </img>
+            <div id ="menu">
+            <img class="button" src="dropdown.png" width=60 height=40 onmouseover="openelement('dropdown')"> </img>
+            <img class="button" src ="media_repeat_alt_inv.png " onclick= 'repeat()' width="50" height="50"> </img>
+          </div>
+          <div id="dropdown" onclick="closeelement('dropdown')">
             
-            <ul id="dropdown" onclick="closeelement('dropdown')">
+            <ul >
                 <li><a class="list" href ="#" onclick ="defineCity('Alkmaar')"> Alkmaar</a> </li>
                 <li><a class="list" href ="#" onclick ="defineCity('Almere')"> Almere</a> </li>
                 <li><a class="list" href ="#" onclick ="defineCity('Amersfoort')"> Amersfoort</a> </li>
@@ -52,7 +56,9 @@
                 <li><a class="list" href ="#" onclick ="defineCity('Zaanstad')"> Zaanstad</a> </li>
                 <li><a class="list" href ="#" onclick ="defineCity('Zoetermeer')"> Zoetermeer</a> </li>
                 <li><a class="list" href ="#" onclick ="defineCity('Zwolle')"> Zwolle</optio/a> </li>    
-            </ul> 
+            </ul>
+          
+          </div>
         <p id="source">
             Geïnspireerd door de
             <a href="http://app.nos.nl/datavisualisatie/gemeentegrenzen/" target="_blank">
