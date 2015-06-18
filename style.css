@@ -112,30 +112,32 @@ svg {
 }
 
 #dropdown{
-    position: relative;
-    float: middle;
-    padding-left: 2%;
-    padding-top: 2%;
-    padding-right: 2%;
-    padding-bottom: 2%;
+    display:absolute;
+    position: fixed;
+    margin: auto;
+    left: 25%;
+    top: 25%;
+    width: 800px;
+    padding: 2%;
     box-sizing: border-box;
     background-color: white;
-    opacity: 0.7;
+    opacity: 0.9;
     columns: 3;
       -webkit-columns: 3;
       -moz-columns: 3;
     list-style-type: none;
     visibility: hidden;
     border-radius: 25px;
-        cursor: pointer;
+    
 }
 
 .button{
-  margin: 15px;
+    margin: 15px;
 }
-.list {
+.list{
     font-family: Verdana;
     line-height: 30px;
     color:black;
     text-decoration:none;
+    cursor: pointer;
 }
