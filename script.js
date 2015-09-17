@@ -84,7 +84,7 @@ function updateVisualization(atlas) {
 
   // get years
   var years = atlas.features.map(function(pit) {
-      var date =  new Date(pit.properties.validSince);
+      var date =  new Date(pit.properties.validSince[0]);
       var year = date.getFullYear();
       return year;
   });
