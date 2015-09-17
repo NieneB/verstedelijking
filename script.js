@@ -37,7 +37,7 @@ function loadCity(city) {
         // check if concepts exist
         if (concepts.features.length > 0 ) {
             console.log("I exist!")
-            console.log(concepts)
+            
             
             // only use concepts containing at least one pit from 'atlas-verstedelijking' souce
             var concept = concepts.features.filter(function(concept) {
@@ -67,7 +67,7 @@ function loadCity(city) {
                         };
                     })
                 };
-
+                console.log(atlas)
                 updateVisualization(atlas);
              } else {
                  d3.select("#error").html("Sorry, deze stad bevat geen verstedelijkingdata. Probeer een andere!");
