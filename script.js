@@ -40,7 +40,7 @@ function loadCity(city) {
             // only use concepts containing at least one pit from 'atlas-verstedelijking' souce
             var concept = concepts.features.filter(function(concept) {
               return concept.properties.pits.map(function(pit) {
-                  return pit.source;
+                  return pit.dataset;
               }).indexOf("atlas-verstedelijking") != -1;
             });
 
@@ -48,7 +48,7 @@ function loadCity(city) {
 
                 // Get all atlas-verstedelijking pits
                 var pits = concept[0].properties.pits.filter(function(pit){
-                    return pit.source == "atlas-verstedelijking"
+                    return pit.dataset == "atlas-verstedelijking"
                 });
 
                 pits.sort(function(a, b) {
