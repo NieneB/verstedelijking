@@ -83,12 +83,10 @@ function updateVisualization(atlas) {
   // get years
   var years = atlas.features.map(function(pit) {
       var date =  new Date(pit.properties.validSince[0]);
-      console.log(date)
       var year = date.getFullYear();
-      console.log(year)
       return year;
   });
-
+    console.log(years)
   var name = atlas.features[0].properties.name;
   d3.select("#city-label").html(name);
 
@@ -97,7 +95,7 @@ function updateVisualization(atlas) {
   var color = d3.scale.ordinal()
       .domain(d3.range(years))
       .range(BGBr[yearCount]);
-
+    
   // projection
   var scale = 1500;
   var offset = [innerWidth / 2, innerHeight / 2.1];
