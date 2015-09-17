@@ -36,8 +36,6 @@ function loadCity(city) {
 
         // check if concepts exist
         if (concepts.features.length > 0 ) {
-            console.log("I exist!")
-            
             
             // only use concepts containing at least one pit from 'atlas-verstedelijking' souce
             var concept = concepts.features.filter(function(concept) {
@@ -85,7 +83,9 @@ function updateVisualization(atlas) {
   // get years
   var years = atlas.features.map(function(pit) {
       var date =  new Date(pit.properties.validSince[0]);
+      console.log(date)
       var year = date.getFullYear();
+      console.log(year)
       return year;
   });
 
