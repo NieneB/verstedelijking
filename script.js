@@ -135,7 +135,7 @@ function updateVisualization(atlas) {
       .append("path")
       .attr("d", path)
       .attr("id", function(d){
-        var date = new Date(d.properties.hasBeginning)
+        var date = new Date(d.properties.validSince[0])
         var year = date.getFullYear();
         return "_"+year;
       })
@@ -150,7 +150,7 @@ function updateVisualization(atlas) {
       .style("stroke", "#3c4044")
       .style("stroke-width", "0.1px")
       .style("fill", function(d) {
-          return color(d.properties.hasBeginning);
+          return color(d.properties.validSince[0]);
       })
       //.style("mix-blend-mode", "multiply")
       .ease("linear")
@@ -171,18 +171,18 @@ function updateVisualization(atlas) {
       .append("div")
       .attr("class", "rect")
       .attr("id", function(d,i){
-        var date = new Date(atlas.features[atlas.features.length - 1 - i].properties.hasBeginning);
+        var date = new Date(atlas.features[atlas.features.length - 1 - i].properties.validSince[0]);
         var year = date.getFullYear();
         return "_"+year;
       })
       .style("width", width +"%")
       .style("height", height+"px")
       .style("background-color", function(d, i) {
-          return color(atlas.features[atlas.features.length - 1 - i].properties.hasBeginning);
+          return color(atlas.features[atlas.features.length - 1 - i].properties.validSince[0]);
       })
       .style("color", "black")
       .text(function(d, i) {
-          var date = new Date(atlas.features[atlas.features.length - 1 - i].properties.hasBeginning);
+          var date = new Date(atlas.features[atlas.features.length - 1 - i].properties.validSince[0]);
           var year = date.getFullYear();
           return year;
       })
@@ -208,7 +208,7 @@ function updateVisualization(atlas) {
           console.log("path#"+jaar)
           d3.select('#'+jaar)
             .style("fill", function(d) {
-          return color(d.properties.hasBeginning);
+          return color(d.properties.validSince[0]);
         });
       })
       
