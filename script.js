@@ -52,7 +52,7 @@ function loadCity(city) {
                 });
 
                 pits.sort(function(a, b) {
-                    return new Date(b.hasBeginning) - new Date(a.hasBeginning);
+                    return new Date(b.validSince[0]) - new Date(a.validSince[0]);
                 });
 
                 atlas = {
