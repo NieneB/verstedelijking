@@ -28,7 +28,7 @@ function defineCity(city){
 var atlas
 
 function loadCity(city) {
-    var url = "https://api.histograph.io/search?name=" + city + "&type=hg:Place";
+    var url = "https://api.histograph.io/search?name=" + city + "&type=hg:Place&dataset=atlas-verstedelijking";
     d3.json(url, function(err, concepts) {
 
         console.log("Calling api.histograph.io for city: '" + city + "':");
@@ -37,7 +37,7 @@ function loadCity(city) {
         // check if concepts exist
         if (concepts.features.length > 0 ) {
             console.log("I exist!")
-            console.log(concepts.features)
+            console.log(concepts)
             
             // only use concepts containing at least one pit from 'atlas-verstedelijking' souce
             var concept = concepts.features.filter(function(concept) {
