@@ -28,7 +28,7 @@ function defineCity(city){
 var atlas
 
 function loadCity(city) {
-    var url = "https://api.histograph.io/search?name=" + city + "&type=hg:Place&dataset=atlas-verstedelijking";
+    var url = "https://api.histograph.io/search?name=" + city + "&dataset=atlas-verstedelijking";
     d3.json(url, function(err, concepts) {
 
         console.log("Calling api.histograph.io for city: '" + city + "':");
